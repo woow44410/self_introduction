@@ -1,0 +1,131 @@
+先安裝Node.js
+https://nodejs.org/zh-cn
+
+
+接著安裝
+npm install -g pnpm
+
+
+建立範本
+npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm
+解釋:
+    npx :指令開始
+    create-next-app :建立一個app
+    @latest :根據最新版本建立
+    nextjs-dashboard :建立的資料夾名稱(專案名稱)
+    --example :以url的專案為範本建立
+
+執行程式
+pnpm run dev
+
+---------額外安裝--------
+安裝 NextAuth.js , https://nextjs.org/learn/dashboard-app/adding-authentication
+pnpm i next-auth@beta
+
+
+--------有些好用的可以安裝----
+讓網頁呈現點擊後滑動到id的效果
+pnpm install react-scroll
+
+
+------ learn next.js -----------
+第一章:入門
+    安裝 react.js 和 pnpm , 建立專案
+
+第二章:CSS 樣式
+    1. 使用 Global CSS file 到 application
+    2. Tailwind 和 CSS modules的差別
+    3. clsx 是可以輕鬆切換類別名稱的函式庫
+
+第三章:優化字體和圖像
+    1. 透過 next/font 新增自訂的 fonts
+    2. 透過 next/image 新增 image
+    3. 當您使用該模組時，Next.js 會自動優化應用程式中的字體next/font
+       它在構建時下載字體檔案並將它們與其他靜態資產一起託管
+       這意味著當使用者存取您的應用程式時，不會出現會影響效能的額外網頁請求字體
+    4. 使用該 next/image 元件自動最佳化影像, next.js 會自動根據瀏覽器和裝置優化圖片格式
+
+第四章:建立佈局和頁面
+    1. 使用 dashboard 檔案系統路由建立路由,與巢狀布局
+    2. 了解什麼是共置、部分渲染和根佈局
+       共置:沒說
+       部分渲染:類似AJAX
+       根部局:定義 application 中所有頁面共用的基本結構和樣式的佈局，確保一致性和便於管理 
+
+第五章:在頁面之間導航
+    1. 使用 next/link 組件
+    2. 使用 usePathname() 讓被選擇的link為藍色
+    3. navigation是怎麼運作的
+    4. use clien 告訴 Next.js 某個文件應該作為客戶端組件（Client Component）來運行。
+
+第六章:設定您的資料庫
+    1. 將專案 push 至 github
+    2. 設定 vercel 帳戶,連結至 Github 以進行即時預覽和部屬
+    3. 建立專案並將其連結到 PostgresSQL
+
+第七章:取得數據
+    1. 資料之間的傳遞( APIs, ORMs, SQL, etc)
+    2. Server Componet 如何幫助安全的連線
+    3. 什麼是 network 的 waterfalls
+    4. 用 JavaScript 實作 parallel data fetching
+
+第八章:靜態和動態渲染
+    1. 什麼是靜態渲染以及它如何提高應用程式的效能
+    2. 什麼是動態渲染以及何時使用它
+    3. 使儀表板動態化的不同方法
+    4. 模擬緩慢的數據獲取，看看會發生什麼
+
+第九章:串流媒體
+    1. 什麼是串流傳輸以及何時可以使用它。
+    2. 如何使用 loading.tsx Suspense 實現串流
+    3. 什麼是載入骨架。
+    4. 什麼是路由組以及何時可以使用它們。
+    5. 在應用程式中放置 Suspense 邊界的位置。
+
+第十章:部分預渲染(PPR) #不太懂
+    1. 什麼是部分預渲染
+    2. 部分預渲染的工作原理
+
+    概括
+        回顧一下，您已經做了一些事情來優化應用程式中的資料擷取：
+            1. 在與應用程式程式碼相同的區域中建立資料庫，以減少伺服器和資料庫之間的延遲。
+            2. 使用 React Server Components 在伺服器上取得資料。這允許您在伺服器上保留昂貴的資料擷取和邏輯，減少客戶端 JavaScript 捆綁，並防止資料庫機密暴露給客戶端。
+            3. 使用 SQL 僅獲取所需的數據，減少了每個請求傳輸的資料量以及轉換記憶體中資料所需的 JavaScript 量。
+            4. 使用 JavaScript 並行化資料獲取 - 在有意義的情況下這樣做。
+            5. 實現了串流處理，以防止緩慢的資料請求阻塞整個頁面，並允許用戶開始與 UI 交互，而無需等待所有內容加載。
+            6. 將資料擷取移至需要它的元件，從而隔離路由的哪些部分應該是動態的。
+        在下一章中，我們將介紹獲取資料時可能需要實現的兩種常見模式：搜尋和分頁。
+
+第十一章:新增搜尋和分頁
+    1. 了解如何使用 Next.js API：useSearchParams、usePathname 和 useRouter。
+    2. 使用 URL 搜尋參數實現搜尋和分頁。
+
+第十二章:變異數據
+    1. 什麼是 React Server Actions 以及如何使用它們來改變資料
+    2. 如何使用表單和伺服器元件
+    3. 使用本機物件的最佳實踐formData，包括類型驗證
+    4. 如何使用 revalidatePathAPI​​ 重新驗證客戶端快取
+    5. 如何建立具有特定 ID 的動態路線段
+
+第十三章:處理錯誤
+    1. 如何使用特殊 error.tsx 檔案來擷取路線段中的錯誤，並向使用者顯示後備 UI。
+    2. 如何使用 notFound 函數和 not-found 檔案來處理404錯誤（對於不存在的資源）。
+
+第十四章:改善無障礙環境
+    1. 如何 eslint-plugin-jsx-a11y 與 Next.js 一起使用來實施可訪問性最佳實踐。
+    2. 如何實作伺服器端表單驗證
+    3. 如何使用 React useActionStatehook 來處理表單錯誤，並將其顯示給使用者
+
+第十五章:新增身份驗證
+    1. 什麼是認證
+    2. 如何使用 NextAuth.js 將身份驗證新增至您的應用程式
+    3. 如何使用中間件重新導向使用者並保護您的路由
+    4. 如何使用 ReactuseActionState 來處理掛起狀態和表單錯誤。
+    身分驗證:可驗證您的身分
+    授權:決定您可以存取的內容。
+
+第十六章:新增 metaData
+    1. metaData 是什麼
+    2. metaData 的type
+    3. 如何使用 metaData 新增 Open Graph 影像
+    4. 如何使用 metaData 新增網站圖示
