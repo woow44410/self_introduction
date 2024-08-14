@@ -47,7 +47,7 @@ export default function Navbar() {
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 py-3 transition-opacity duration-300`} 
             style={{
-                backgroundColor: menuOpen
+                backgroundColor: menuOpen||!isDesktop
                     ? 'black'
                     : `rgba(20, 23, 30, ${scrolling})`
             }}>
@@ -61,7 +61,7 @@ export default function Navbar() {
             </ul>
             
             <div className="relative">
-                <ul className={`flex ${menuOpen ? 'absolute top-3 left-50 right-0 flex-col bg-gray-500 bg-opacity-90 z-10 items-end  rounded-bl-[60px]' : 'flex-row justify-end pr-10'} ${menuOpen || isDesktop ? 'block' : 'hidden'} items-${menuOpen ? 'end' : 'start'}`}>
+                <ul className={`flex ${menuOpen ? 'absolute top-3 left-0 right-0 flex-col bg-gray-500 bg-opacity-80 z-10 items-end transition-opacity opacity-100' : 'flex-row justify-end pr-10'} ${menuOpen || isDesktop ? 'block' : 'hidden'} items-${menuOpen ? 'end' : 'start'}`}>
                     <li className={`m-4 text-lg pr-2 text-right ${isDesktop ? textColorClass : 'text-white'}`}>
                         <ScrollLink className={`link cursor-pointer`} to="home" smooth={true} duration={500} offset={offset} activeClass='text-red-600' spy={true}>
                             Home
