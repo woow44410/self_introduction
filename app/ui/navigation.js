@@ -7,7 +7,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(true);
     const [scrolling, setScrolling] = useState(0);
-    const [offset, setOffset] = useState(0); // 新增一個 offset state
+    const [offset, setOffset] = useState(0);
 
     const textColorClass = scrolling > 0 ? 'text-white' : 'text-black';
 
@@ -17,9 +17,9 @@ export default function Navbar() {
             setIsDesktop(desktop);
             if (desktop) {
                 setMenuOpen(false);
-                setOffset(-80); // 桌面版的 offset
+                setOffset(-80);
             } else {
-                setOffset(-65); // 手機版的 offset
+                setOffset(-65);
             }
         };
 
@@ -41,13 +41,13 @@ export default function Navbar() {
     }, [offset]);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen(prevState => !prevState);
     };
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 py-3 transition-opacity duration-300`} 
             style={{
-                backgroundColor: menuOpen||!isDesktop
+                backgroundColor: menuOpen || !isDesktop
                     ? 'black'
                     : `rgba(20, 23, 30, ${scrolling})`
             }}>
@@ -61,7 +61,7 @@ export default function Navbar() {
             </ul>
             
             <div className="relative">
-                <ul className={`flex ${menuOpen ? 'absolute top-3 left-0 right-0 flex-col bg-gray-500 bg-opacity-80 z-10 items-end transition-opacity opacity-100' : 'flex-row justify-end pr-10'} ${menuOpen || isDesktop ? 'block' : 'hidden'} items-${menuOpen ? 'end' : 'start'}`}>
+                <ul className={`flex transition-all duration-300 ${menuOpen && !isDesktop ? 'absolute top-3 left-0 right-0 flex-col bg-gray-500 bg-opacity-80 z-10 items-end' : 'flex-row justify-end pr-10'} ${menuOpen || isDesktop ? 'block' : 'hidden'}`}>
                     <li className={`m-4 text-lg pr-2 text-right ${isDesktop ? textColorClass : 'text-white'}`}>
                         <ScrollLink className={`link cursor-pointer`} to="home" smooth={true} duration={500} offset={offset} activeClass='text-red-600' spy={true}>
                             Home
