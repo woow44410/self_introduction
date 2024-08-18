@@ -1,9 +1,9 @@
-export default function About() {
+export default function Skill() {
     return (
         <section className="max-w-full px-[3%] py-[2%] md:w-[80%]  md:px-[0%] md:py-[9%]  ">
-            <div className="flex flex-wrap justify-start gap-10 lg:gap-12 md:gap-36 px-[0%] md:px-[5%]"> {/* 使用 gap 添加間隙 */}
-                <div className="flex justify-center w-full lg:w-[40%]  md:w-[30%] ">
-                    <div className="w-[208px] h-[208px] lg:w-[280px] lg:h-[280px] md:w-[345px] md:h-[345px]  aspect-square bg-gray-200 rounded-full bg-[url('/about/big_pin.jpg')] bg-cover"></div>
+            <div className="flex flex-wrap justify-start gap-10 md:gap-36 px-[0%] md:px-[5%]"> {/* 使用 gap 添加間隙 */}
+                <div className="flex justify-center w-full  md:w-[30%] ">
+                    <div className="w-[208px] h-[208px] md:w-[345px] md:h-[345px] aspect-square bg-gray-200 rounded-full bg-[url('/about/big_pin.jpg')] bg-cover"></div>
                 </div>                
                 <div className="w-full min-w-[320px] flex flex-col px-[2%] text-black text-center md:w-[48%] md:text-left">
                     <h2 className="text-4xl  font-bold "> About me </h2>

@@ -16,6 +16,8 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Microsoft+JhengHei:wght@400&display=swap');
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,6 +26,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Microsoft JhengHei", sans-serif;
 }
 
 @layer utilities {
