@@ -1,0 +1,36 @@
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--data-percent);
+    }
+}
+
+.progress-bar {
+    animation: fillBar 1s ease-in-out forwards;
+    --datapercent: 0%; /* 默認值 */
+}
+
+
+.custom-button {
+    color: black; /* 按鈕文字顏色 */
+    padding: 10px 20px; /* 內邊距 */
+    border-radius: 3px; /* 圓角 */
+    width: 120px; /* 寬度 */
+    height: 60px; /* 高度 */
+    overflow: hidden; /* 隱藏溢出內容 */
+    border: 1px solid #4a4a4a; /* 邊框顏色 */
+    background-color: transparent; /* 背景顏色 */
+    font-size: 16px; /* 字體大小 */
+    display: flex; /* 使用 flexbox 進行對齊 */
+    align-items: center; /* 垂直居中對齊文字 */
+    justify-content: center; /* 水平居中對齊文字 */
+    transition: background-color 0.3s; /* 背景顏色過渡效果 */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* 右下角陰影效果 */
+}
+
+.custom-button:hover {
+    background-color: #f0f0f0; /* 懸停時背景顏色 */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* 懸停時右下角陰影效果 */
+}

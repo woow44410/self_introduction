@@ -1,12 +1,12 @@
 export default function Experience() {
     return (
-        <section className="max-w-full px-[3%] py-[2%] md:w-[90%] md:py-[3%]">
+        <section className="max-w-full py-[2%] w-[80%] md:py-[3%]">
             <h2 className="text-3xl font-bold mb-4 pb-[1%] text-black text-center">Experience</h2>
             <div className="flex flex-wrap justify-center md:justify-between gap-4"> 
-                <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px]">
+                <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px] shadow-lg">
                     <div className="flex flex-col items-center justify-start w-full">
                         <div className="flex flex-col items-center text-center w-full pt-[28px]">
-                            <div className="w-[130px] h-[85px] bg-[url('/experience/nstc-icon.png')] bg-contain bg-no-repeat bg-center"></div>
+                            <div className="w-[130px] h-[85px] bg-[url('/experience/nstc-icon.png')] bg-contain bg-no-repeat bg-center "></div>
                             <h2 className="text-3xl font-bold text-black">國科會大專生計畫</h2>
                             <p className="text-base md:text-lg pt-[2%] text-black leading-relaxed">
                                 於大三時開始進行專題與大專生計畫，名稱為 <br/>
@@ -19,7 +19,7 @@ export default function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px]">
+                <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px] shadow-lg">
                     <div className="flex flex-col items-center justify-start w-full">
                         <div className="flex flex-col items-center text-center w-full pt-[28px]">
                             <div className="w-[130px] h-[85px] bg-[url('/experience/coorperation-icon.png')] bg-contain bg-no-repeat bg-center"></div>
@@ -35,7 +35,7 @@ export default function Experience() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px]">
+                <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px] shadow-lg">
                     <div className="flex flex-col items-center justify-start w-full">
                         <div className="flex flex-col items-center text-center w-full pt-[28px]">
                             <div className="w-[130px] h-[85px] bg-[url('/experience/study-icon.png')] bg-contain bg-no-repeat bg-center"></div>

@@ -29,17 +29,17 @@ export default function Contact() {
                     {/* 聯繫資訊整體容器 */}
                     <div className="flex flex-col justify-between h-full">
                         {/* Facebook 聯繫資訊 */}
-                        <div className="flex items-center justify-center md:justify-start mb-2">
+                        <div className="flex items-center justify-start mb-2">
                             <div className="w-[40px] h-[40px] bg-[url('/contact/facebook-icon.png')] bg-contain bg-no-repeat"></div>
                             <span className="ml-3 text-white text-lg">蘇裕凱</span>
                         </div>
                         {/* 電話聯繫資訊 */}
-                        <div className="flex items-center justify-center md:justify-start mb-2">
+                        <div className="flex items-center justify-start mb-2">
                             <div className="w-[40px] h-[40px] bg-[url('/contact/phone-icon.png')] bg-contain bg-no-repeat"></div>
                             <span className="ml-3 text-white text-lg">0979311550</span>
                         </div>
                         {/* 電子郵件聯繫資訊 */}
-                        <div className="flex items-center justify-center md:justify-start">
+                        <div className="flex items-center justify-start">
                             <div className="w-[40px] h-[40px] bg-[url('/contact/mail-icon.png')] bg-contain bg-no-repeat"></div>
                             <span className="ml-3 text-white text-lg">woow44410@gmail.com</span>
                         </div>
