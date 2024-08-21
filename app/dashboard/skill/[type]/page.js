@@ -3,13 +3,14 @@ import BackEnd from './back_end';
 import Other from './other';
 
 export default function SkillsPage({ type }) {
-    if (type === 'front-end') {
-        return <FrontEnd />;
-    } else if (type === 'back-end') {
-        return <BackEnd />;
-    } else if (type === 'other') {
-        return <Other />;
-    } else {
-        return <div>請選擇一個Button。</div>;
+    switch (type) {
+        case 'front-end':
+            return <FrontEnd />;
+        case 'back-end':
+            return <BackEnd />;
+        case 'other':
+            return <Other />;
+        default:
+            return <div>請選擇一個Button。</div>;
     }
 }
