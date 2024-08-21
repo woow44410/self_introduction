@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Experience() {
     return (
         <section className="max-w-full py-[2%] w-[80%] md:py-[3%]">
@@ -6,7 +8,15 @@ export default function Experience() {
                 <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px] shadow-lg">
                     <div className="flex flex-col items-center justify-start w-full">
                         <div className="flex flex-col items-center text-center w-full pt-[28px]">
-                            <div className="w-[130px] h-[85px] bg-[url('/experience/nstc-icon.png')] bg-contain bg-no-repeat bg-center "></div>
+                            <Image
+                                src="/experience/nstc-icon.png"
+                                alt="NSTC Icon"
+                                width={130}
+                                height={85}
+                                className="object-contain"
+                                sizes="130px"
+                                priority={false} // false代表lazy loading
+                            />
                             <h2 className="text-3xl font-bold text-black">國科會大專生計畫</h2>
                             <p className="text-base md:text-lg pt-[2%] text-black leading-relaxed">
                                 於大三時開始進行專題與大專生計畫，名稱為 <br/>
@@ -22,7 +32,14 @@ export default function Experience() {
                 <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px] shadow-lg">
                     <div className="flex flex-col items-center justify-start w-full">
                         <div className="flex flex-col items-center text-center w-full pt-[28px]">
-                            <div className="w-[130px] h-[85px] bg-[url('/experience/coorperation-icon.png')] bg-contain bg-no-repeat bg-center"></div>
+                            <Image
+                                src="/experience/coorperation-icon.png"
+                                alt="Coorperation Icon"
+                                width={130}
+                                height={85}
+                                className="object-contain"
+                                sizes="130px"
+                            />
                             <h2 className="text-3xl font-bold text-black">與它人長期合作的經歷</h2>
                             <p className="text-base md:text-lg pt-[2%] text-black leading-relaxed">
                                 我和我的同學們是四人一組，各司其職 <br/>
@@ -38,7 +55,14 @@ export default function Experience() {
                 <div className="flex-grow min-w-[330px] basis-[30%] bg-white flex px-[5px] pb-[30px] shadow-lg">
                     <div className="flex flex-col items-center justify-start w-full">
                         <div className="flex flex-col items-center text-center w-full pt-[28px]">
-                            <div className="w-[130px] h-[85px] bg-[url('/experience/study-icon.png')] bg-contain bg-no-repeat bg-center"></div>
+                            <Image
+                                src="/experience/study-icon.png"
+                                alt="Study Icon"
+                                width={130}
+                                height={85}
+                                className="object-contain"
+                                sizes="130px"
+                            />
                             <h2 className="text-3xl font-bold text-black">目前狀況</h2>
                             <p className="text-base md:text-lg pt-[2%] text-black leading-relaxed">
                                 目前正在逢甲大學內任職 <br/><br/>

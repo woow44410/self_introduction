@@ -43,7 +43,7 @@ export default function BackEnd() {
                 </div>
                 <h5 className="font-bold mt-4 mb-2">SQL Server</h5>
                 <div className="relative bg-gray-300 h-6 rounded-full overflow-hidden">
-                    <div className="progress-bar bg-yellow-500 h-full text-white flex items-center justify-end pr-2" data-percent="90%">90%</div>
+                    <div className="progress-bar bg-red-500 h-full text-white flex items-center justify-end pr-2" data-percent="90%">90%</div>
                 </div>
             </div>
         </section>
