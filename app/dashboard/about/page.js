@@ -1,5 +1,5 @@
 import Image from 'next/image';
-//
+
 const basePath = process.env.__NEXT_ROUTER_BASEPATH || '';
 
 export default function About() {
