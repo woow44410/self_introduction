@@ -17,6 +17,7 @@ const nextConfig = {
       unoptimized: true,
   },
   trailingSlash: true,
+  assetPrefix: '/self_introduction/',
 };
 
 export default nextConfig;
