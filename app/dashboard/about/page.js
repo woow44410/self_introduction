@@ -1,13 +1,16 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 export default function About() {
+    const { basePath } = useRouter(); // 取得 basePath
+
     return (
         <section className="max-w-full py-[2%] w-[80%] md:px-[0%] md:py-[9%]">
             <div className="flex flex-wrap justify-start gap-10 lg:gap-12 md:gap-36 px-[0%] md:px-[5%]">
                 <div className="flex justify-center w-full lg:w-[40%] md:w-[30%]">
                     <div className="relative w-[208px] h-[208px] lg:w-[280px] lg:h-[280px] md:w-[345px] md:h-[345px] bg-gray-200 rounded-full overflow-hidden">
                         <Image 
-                            src="/about/big_pin.jpg"
+                            src={`${basePath}/about/big_pin.jpg`} // 這裡加上 basePath
                             alt="Big Pin"
                             fill
                             className="rounded-full object-cover"
