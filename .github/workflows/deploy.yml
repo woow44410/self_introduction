@@ -24,6 +24,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create .nojekyll file
+        run: touch ./out/.nojekyll  # ✅ 確保 .nojekyll 存在，避免 GitHub Pages 忽略 _next 目錄
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
