@@ -15,8 +15,7 @@ export default function Experience() {
                                 alt="NSTC Icon"
                                 width={130}
                                 height={85}
-                                className="object-contain"
-                                sizes="130px"
+                                className="w-[130px] h-[85px] object-contain"
                                 priority={false} // false代表lazy loading
                             />
                             <h2 className="text-3xl font-bold text-black">國科會大專生計畫</h2>
@@ -39,8 +38,7 @@ export default function Experience() {
                                 alt="Coorperation Icon"
                                 width={130}
                                 height={85}
-                                className="object-contain"
-                                sizes="130px"
+                                className="w-[130px] h-[85px] object-contain"
                             />
                             <h2 className="text-3xl font-bold text-black">與它人長期合作的經歷</h2>
                             <p className="text-base md:text-lg pt-[2%] text-black leading-relaxed">
@@ -62,8 +60,7 @@ export default function Experience() {
                                 alt="Study Icon"
                                 width={130}
                                 height={85}
-                                className="object-contain"
-                                sizes="130px"
+                                className="w-[130px] h-[85px] object-contain"
                             />
                             <h2 className="text-3xl font-bold text-black">目前狀況</h2>
                             <p className="text-base md:text-lg pt-[2%] text-black leading-relaxed">
