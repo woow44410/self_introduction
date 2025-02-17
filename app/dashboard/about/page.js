@@ -1,8 +1,11 @@
+"use client"; // ✅ 這行讓整個 component 變成 Client Component
+
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export default function About() {
-    const { basePath } = useRouter(); // 取得 basePath
+    const pathname = usePathname(); // 取得當前路徑
+    const basePath = pathname.startsWith('/self_introduction') ? '/self_introduction' : '';
 
     return (
         <section className="max-w-full py-[2%] w-[80%] md:px-[0%] md:py-[9%]">
@@ -10,7 +13,7 @@ export default function About() {
                 <div className="flex justify-center w-full lg:w-[40%] md:w-[30%]">
                     <div className="relative w-[208px] h-[208px] lg:w-[280px] lg:h-[280px] md:w-[345px] md:h-[345px] bg-gray-200 rounded-full overflow-hidden">
                         <Image 
-                            src={`${basePath}/about/big_pin.jpg`} // 這裡加上 basePath
+                            src={`${basePath}/about/big_pin.jpg`} // ✅ 修正 basePath
                             alt="Big Pin"
                             fill
                             className="rounded-full object-cover"
