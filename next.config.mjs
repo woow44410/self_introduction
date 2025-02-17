@@ -14,12 +14,11 @@ const isProd = process.env.NODE_ENV === 'production';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: isProd ? '/self_introduction':'',
+  basePath: isProd ? '/self_introduction' : '',  // **這裡要與 GitHub Pages 網址匹配**
+  assetPrefix: isProd ? '/self_introduction/' : '',  // **確保靜態資源載入正確**
   images: {
       unoptimized: true,
   },
-  trailingSlash: true,
-  assetPrefix: isProd ? '/self_introduction':'',
 };
 
 export default nextConfig;

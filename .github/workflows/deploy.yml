@@ -29,3 +29,4 @@ jobs:
         with:
           folder: out
           branch: gh-pages
+          clean: true   # **確保舊的 `_next/` 被刪除**
