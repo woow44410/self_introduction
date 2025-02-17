@@ -1,11 +1,6 @@
-"use client";
-
 import Image from 'next/image';
-import getConfig from 'next/config';
 
-const { publicRuntimeConfig } = getConfig();
-const basePath = publicRuntimeConfig?.basePath || ''; // ✅ 直接讀取 next.config.mjs 的 basePath
-
+const basePath = process.env.__NEXT_ROUTER_BASEPATH || '';
 
 export default function About() {
     return (
@@ -14,7 +9,7 @@ export default function About() {
                 <div className="flex justify-center w-full lg:w-[40%] md:w-[30%]">
                     <div className="relative w-[208px] h-[208px] lg:w-[280px] lg:h-[280px] md:w-[345px] md:h-[345px] bg-gray-200 rounded-full overflow-hidden">
                         <Image
-                            src={`${basePath}/about/big_pin.jpg`} // ✅ 自動匹配 basePath
+                            src={`${basePath}/about/big_pin.jpg`} // ✅ 確保 `basePath` 正確使用
                             alt="Big Pin"
                             fill
                             className="rounded-full object-cover"
